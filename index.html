@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+
+
+        
+
+<script type="text/javascript" src="app/assets/js/gtag.js"></script>
+<!-- End Google Tag Manager -->
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+
+<title>Shuffle Monster Top 512 Heap</title>
+<meta name="description" content="BSOV.info is an information portal for BitcoinSoV. With a block explorer, stats info, and links.">
+
+<!-- HTML Meta Tags
+
+
+<meta property="og:site_name" content="BitconSoV">
+<meta property="og:image" content="https://bsov.info/app/assets/img/BSOV-logo.png">
+<meta property="og:description" content="BitconSoV is an information portal for BitconSoV. With a block explorer, stats info, and links.">
+<meta property="og:title" content="BitconSoV">
+
+
+<meta itemprop="name" content="BitconSoV">
+<meta itemprop="description" content="BitconSoV is an information portal for BitconSoV. With a block explorer, stats info, and links.">
+<meta itemprop="image" content="https://bsov.info/app/assets/img/BSOV-logo.png">
+
+
+<meta property="og:url" content="https://bsov.info">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BitconSoV">
+<meta property="og:description" content="BitconSoV is an information portal for BitconSoV. With a block explorer, stats info, and links.">
+<meta property="og:image" content="https://bsov.info/app/assets/img/BSOV-logo.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BitconSoV">
+<meta name="twitter:description" content="BitconSoV is an information portal for BitconSoV. With a block explorer, stats info, and links.">
+<meta name="twitter:image" content="https://bsov.info/app/assets/img/BSOV-logo.png">
+
+<meta name="keywords" content="BSOV, BitconSoV, 0xBTC Wiki, 0x, Token Mining, Mineable Token, 0xBitcoin Mining, Mining, ERC20, Token, Ethereum, ETH">
+-->
+
+<link rel="icon" type="image/png" href="/app/assets/img/favicon.png"/>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+
+
+<script src="https://kit.fontawesome.com/6e91a3b975.js"></script>
+
+<!--Bootstrap Stylesheet-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<!-- jquery is here because scripts need it early on. may want to move other js imports here. -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- jqMath allows for real equation formatting -->
+<script src="app/assets/js/jqmath-etc-0.4.6.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
+
+<!-- note: lodash is only used for _.debounce() -->
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117165354-1"></script>
+<script type="text/javascript" src="app/assets/js/gtag.js"></script>
+-->
+
+<meta name="viewport" content="width=600">
+
+
+
+  <link href="/app/assets/stylesheets/main.css" rel="stylesheet"></head>
+  <body>
+
+
+    <div class="bg-transparent">
+
+
+  
+<div class="container">
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0, 48, 10, 1);" id="navbar">
+
+
+    <a class="navbar-brand" href="/"><img src="/app/assets/img/hat-logo-transparent.png" height="75px" width="75px" style="max-height:75px" alt="Responsive image" alt=""></img>  <br><br>
+
+    <span class="align-middle">  <font size="6" color="ffffff"><b>  Shuffle Monster<br>  512 Heap</b></font></span>
+    </a>
+  <button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font color="ffffff"><b>Docs</b></font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="navbar-item" target="blank" href="https://www.btcsov.com/">
+          &nbsp; <i class="icon ion-ios-world-outline navicon"></i>&nbsp;  Shuffle Monster Web
+          </a>
+          <a class="navbar-item "  target="blank" href="https://uniswap.exchange/swap/0x3A9FfF453d50D4Ac52A6890647b823379ba36B9E">
+          &nbsp; <i class="icon ion-ios-paper-outline navicon"></i>&nbsp; Buy/Swap
+          </a>
+          <a class="navbar-item "  target="blank" href="https://etherscan.io/address/0x3A9FfF453d50D4Ac52A6890647b823379ba36B9E#code">
+          &nbsp; <i class="icon ion-ios-gear-outline navicon"></i>&nbsp;  Smart Contract
+          </a>
+          <hr class="navbar-divider">
+          <div class="navbar-image">
+            <div class="has-text-centered">
+              <img :src="contractQR" height="100" width="100" style="max-height:100px"/>
+            </div>
+        </div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <font color="ffffff"><b>Community</b></font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="navbar-item "  target="blank" href="https://t.me/shuftoken">
+          &nbsp; <i class="icon ion-ios-paperplane-outline navicon"></i>&nbsp;  Telegram
+          </a>
+          <a class="navbar-item "  target="blank" href="https://www.reddit.com/r/ShuffleMonster/">
+          &nbsp; <i class="icon ion-social-reddit-outline navicon"></i>&nbsp;  Subreddit
+          </a>
+          <a class="navbar-item" href="https://twitter.com/ShuffleToken" target="_blank">
+            &nbsp; <i class="icon ion-social-twitter-outline navicon"></i>&nbsp; Twitter
+            </a>
+
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+
+  </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+        <div class="jumbo-logo-container">
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container bg-moredark p3 mb-5 rounded">
+
+
+
+
+
+
+
+
+
+
+
+      <!--<hide">   <div class="col-3" align="center"> </hide>-->
+
+
+
+
+
+          <table align="center">
+            <tbody>
+
+            <div class="col-lg-3 col-sm-12">
+
+
+
+            <div class="row justify-content-center">
+              <tr>
+              <th class="row-cell has-text-centered"><font style='color: #fff;'>Total Holders &nbsp;&nbsp; </font> </td>
+              <th class="row-cell has-text-centered"><b><font class="wallets" color="#b62121"></font></b></td>
+            </tr>
+              <tr>
+                <td>
+                <div id="holders" class="row justify-content-center">
+                <b><h4><font color="#53fc18">Top 512 Heap</font></h4></b>
+                </div>
+              </td>
+            </tr>
+
+            </div>
+
+
+            <div class="row">
+            <div class="col-sm-12" style="max-width:100%;">
+            <table class="table" align="center">
+            <tbody bgcolor="#00300a">
+            <tr v-for="(item, index) in list"   v-bind:class="{   'asset-row':true, 'acts-as-link':true, 'hover-shadow':true   } ">
+            <td>
+
+              <canvas id="pie-holders" style="position: relative; height:75vh; max-width:200%"></canvas>
+
+            </td>
+            </tr>
+
+
+
+            </tbody>
+            </table>
+            </div>
+            </div>
+
+
+
+
+
+
+            </div>
+          </tbody>
+      </table>
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+  var el = function(id){ return document.querySelector(id); };
+  /* 'safe' version if el that returns a dummy for non-existent elements */
+  var el_safe = function(id) {
+    let e = el(id);
+    if (e) {
+      return e;
+    } else {
+      return {};
+    }
+  }
+
+  var log = function(){
+    // 1. Convert args to a normal array
+    var args = Array.prototype.slice.call(arguments);
+    // 2. Prepend log prefix log string
+    args.unshift(((Date.now()-globalTimerStart)/1000).toFixed(2) + 's ');
+    // 3. Pass along arguments to console.log
+    console.log.apply(console, args);
+  }
+  var globalTimerStart = Date.now();
+
+  let searchParams = new URLSearchParams(window.location.search)
+  </script>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <footer id="footer" class="footer bg-transparent">
+   <div class="bg-transparent">
+<!--Hide      <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647;"><i class="icon-arrow-up"></i></a> hide-->
+     <div class="content has-text-centered">
+
+
+
+          <br>
+          <font size="2">
+          The source code is licensed
+         <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+         is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+         </font>
+
+     </div>
+   </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  <script type="text/javascript" src="/bundle.js"></script></body>
+</html>
