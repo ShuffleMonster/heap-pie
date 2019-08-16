@@ -205,8 +205,8 @@
 
             <div class="row justify-content-center">
               <tr>
-              <th class="row-cell has-text-centered"><font style='color: #fff;'>Total Holders &nbsp;&nbsp; </font> </td>
-              <th class="row-cell has-text-centered"><b><font class="wallets" color="#b62121"></font></b></td>
+              <th class="row-cell has-text-centered"><font style='color: #fff;'>Total Holders &nbsp;&nbsp; </font> </th>
+              <th class="row-cell has-text-centered"><b><font class="wallets" color="#b62121"></font></b></th>
             </tr>
               <tr>
                 <td>
@@ -220,13 +220,13 @@
 
 
             <div class="row">
-            <div class="col-sm-12" style="max-width:100%;">
+            <div class="col-sm-12" style="max-width:500%; max-height:500%;">
             <table class="table" align="center">
             <tbody bgcolor="#00300a">
             <tr v-for="(item, index) in list"   v-bind:class="{   'asset-row':true, 'acts-as-link':true, 'hover-shadow':true   } ">
             <td>
 
-              <canvas id="pie-holders" style="position: relative; height:75vh; max-width:200%"></canvas>
+              <canvas id="pie-holders" style="position: relative; max-height:1000; max-width:1000"></canvas>
 
             </td>
             </tr>

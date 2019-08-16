@@ -64171,10 +64171,10 @@ function generateHoldersGraph(holders, minted) {
   var label_list = [];
   var colors = [];
 
-  colors.push('#53fc18');
+  colors.push('#3d3d3d');
   colors.push('#0066ff');
+  colors.push('#f70000');
   colors.push('#f700f5');
-  colors.push('#e1a95f');
 
   // Used to get the 'other' holders
   var sum = 0;
@@ -64195,7 +64195,7 @@ function generateHoldersGraph(holders, minted) {
   }
 
   // This pushes the 'Other Wallets Total'
-  //  amount.unshift(Math.round(minted - sum));
+  //  amount.shift(Math.round(minted - sum));
   // label_list.unshift(`Other Wallets Total (${((amount[0] * 100) / minted).toFixed(3)}% of Supply)`);
 
   var data = {
@@ -64213,11 +64213,13 @@ function generateHoldersGraph(holders, minted) {
   };
 
   var myPieChart = new Chart(document.getElementById('pie-holders').getContext('2d'), {
-    type: 'pie',
+    type: 'doughnut',
     data: data,
     options: {
+      animateRotate: true,
       legend: {
-        display: false
+        display: false,
+        fullWidth: true
       }
     }
   });
@@ -64239,7 +64241,7 @@ async function getWallets() {
   });
 }
 
-async function showHoldersGraph(tokensMinted) {
+async function showHoldersGraph(totalSupply) {
 
   // Holds top wallets data
   var tokenHolders = await getTokenHolders();
@@ -64248,7 +64250,7 @@ async function showHoldersGraph(tokensMinted) {
   var wallets = await getWallets();
   $('.wallets').text('Total Holders: ' + wallets.holdersCount);
 
-  generateHoldersGraph(tokenHolders, tokensMinted);
+  generateHoldersGraph(tokenHolders, totalSupply);
 }
 
 function isExchange(address) {
