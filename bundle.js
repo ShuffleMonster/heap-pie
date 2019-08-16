@@ -64227,7 +64227,7 @@ function generateHoldersGraph(holders, minted) {
 
 async function getTokenHolders() {
   return new Promise((resolve, reject) => {
-    $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://api.bloxy.info/token/token_holders_list?token=0x3A9FfF453d50D4Ac52A6890647b823379ba36B9E&limit=512&key=ACCl2UPf2Pgqi&format=table') + '&callback=?', function (data) {
+    $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://api.bloxy.info/token/token_holders_list?token=0x3A9FfF453d50D4Ac52A6890647b823379ba36B9E&limit=513&key=ACCl2UPf2Pgqi&format=table') + '&callback=?', function (data) {
       resolve(JSON.parse(data.contents));
     });
   });
@@ -64248,7 +64248,7 @@ async function showHoldersGraph(totalSupply) {
 
   // Used for total wallet count representation
   var wallets = await getWallets();
-  $('.wallets').text('Total Holders: ' + wallets.holdersCount);
+  $('.wallets').text(' ' + wallets.holdersCount);
 
   generateHoldersGraph(tokenHolders, totalSupply);
 }

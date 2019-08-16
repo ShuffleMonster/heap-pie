@@ -15,6 +15,21 @@
 <title>Shuffle Monster Top 512 Heap</title>
 <meta name="description" content="BSOV.info is an information portal for BitcoinSoV. With a block explorer, stats info, and links.">
 
+<style>
+.myTableBg1 {
+  width:100%;
+  min-width: 260px;
+  min-height:200px;
+  text-align: center;
+  background: ;
+  background-image:url('app/assets/img/spinning-eyes.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+
+  }
+</style>
+
 <!-- HTML Meta Tags
 
 
@@ -205,8 +220,7 @@
 
             <div class="row justify-content-center">
               <tr>
-              <th class="row-cell has-text-centered"><font style='color: #fff;'>Total Holders &nbsp;&nbsp; </font> </th>
-              <th class="row-cell has-text-centered"><b><font class="wallets" color="#b62121"></font></b></th>
+              <th class="row-cell has-text-centered"><font style='color: #fff;'>Total Holders: &nbsp;&nbsp; </font><b><font class="wallets" color="#b62121"></font></b> </th>
             </tr>
               <tr>
                 <td>
@@ -220,13 +234,13 @@
 
 
             <div class="row">
-            <div class="col-sm-12" style="max-width:500%; max-height:500%;">
-            <table class="table" align="center">
-            <tbody bgcolor="#00300a">
+            <div class="col-sm-12" style="max-width:100%; max-height:100%;">
+            <table class="myTableBg1" align="center">
+            <tbody>
             <tr v-for="(item, index) in list"   v-bind:class="{   'asset-row':true, 'acts-as-link':true, 'hover-shadow':true   } ">
             <td>
 
-              <canvas id="pie-holders" style="position: relative; max-height:1000; max-width:1000"></canvas>
+              <canvas id="pie-holders" style="position: relative; max-height:150vh; max-width:150vh"></canvas>
 
             </td>
             </tr>
