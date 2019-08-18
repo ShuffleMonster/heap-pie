@@ -64171,10 +64171,9 @@ function generateHoldersGraph(holders, minted) {
   var label_list = [];
   var colors = [];
 
-  colors.push('#3d3d3d');
-  colors.push('#0066ff');
+  colors.push('#1cff00');
+  colors.push('#ff00c7');
   colors.push('#f70000');
-  colors.push('#f700f5');
 
   // Used to get the 'other' holders
   var sum = 0;
@@ -64257,20 +64256,14 @@ function isExchange(address) {
 
   // Add exchanges here
   var exchanges = [{
+    address: '0x249de01F2dCdf1B679C4EFd88524Ee93a01A1CDf',
+    name: 'Developer Fund'
+  }, {
     address: '0x0515023dc5ab2a88713ab5a03011e56ea754ad6f',
     name: 'Unclaimed Shuffle Tokens'
   }, {
     address: '0x536956fab86774fb55cfaacf496bc25e4d2b435c',
     name: 'Uniswap'
-  }, {
-    address: '0x2a0c0dbecc7e4d658f48e01e3fa353f44050c208',
-    name: 'IDEX'
-  }, {
-    address: '0xe03c23519e18d64f144d2800e30e81b0065c48b5',
-    name: 'Mercatox 2'
-  }, {
-    address: '0x701564aa6e26816147d4fa211a0779f1b774bb9b',
-    name: 'Uniswap 0xBTC'
   }];
 
   for (var i = 0; i < exchanges.length; i++) {
