@@ -64172,8 +64172,9 @@ function generateHoldersGraph(holders, minted) {
   var colors = [];
 
   colors.push('#1cff00');
-  colors.push('#ff00c7');
   colors.push('#f70000');
+  colors.push('#ff00c7');
+  colors.push('#ffb000');
 
   // Used to get the 'other' holders
   var sum = 0;
@@ -64215,10 +64216,16 @@ function generateHoldersGraph(holders, minted) {
     type: 'doughnut',
     data: data,
     options: {
-      animateRotate: true,
+
+      responsive: true,
+      maintainAspectRatio: true,
+      transparencyEffects: true,
+      dataSetBorderWidth: 2,
       legend: {
-        display: false,
+
+        display: true,
         fullWidth: true
+
       }
     }
   });
@@ -64226,7 +64233,7 @@ function generateHoldersGraph(holders, minted) {
 
 async function getTokenHolders() {
   return new Promise((resolve, reject) => {
-    $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://api.bloxy.info/token/token_holders_list?token=0x3A9FfF453d50D4Ac52A6890647b823379ba36B9E&limit=513&key=ACCl2UPf2Pgqi&format=table') + '&callback=?', function (data) {
+    $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://api.bloxy.info/token/token_holders_list?token=0x3A9FfF453d50D4Ac52A6890647b823379ba36B9E&limit=512&key=ACCl2UPf2Pgqi&format=table') + '&callback=?', function (data) {
       resolve(JSON.parse(data.contents));
     });
   });
@@ -64256,14 +64263,17 @@ function isExchange(address) {
 
   // Add exchanges here
   var exchanges = [{
-    address: '0x249de01F2dCdf1B679C4EFd88524Ee93a01A1CDf',
-    name: 'Developer Fund'
-  }, {
     address: '0x0515023dc5ab2a88713ab5a03011e56ea754ad6f',
-    name: 'Unclaimed Shuffle Tokens'
+    name: 'Unclaimed Tokens'
   }, {
     address: '0x536956fab86774fb55cfaacf496bc25e4d2b435c',
     name: 'Uniswap'
+  }, {
+    address: '0x249de01f2dcdf1b679c4efd88524ee93a01a1cdf',
+    name: 'Developer Fund1'
+  }, {
+    address: '0xd4d221ad5b753a6fcbb58a6c7b6b92605ca5325f',
+    name: 'Developer Fund2'
   }];
 
   for (var i = 0; i < exchanges.length; i++) {

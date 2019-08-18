@@ -22,8 +22,7 @@
   min-width: 260px;
   min-height:200px;
   text-align: center;
-  background: ;
-  background-image:url('app/assets/img/spinning-eyes.gif');
+  background: #081f10;
   background-repeat: no-repeat;
   background-position: center center;
 
@@ -144,13 +143,7 @@
 
 
 
-        <div class="jumbo-logo-container">
 
-
-
-
-
-        </div>
 
 
 
@@ -206,16 +199,30 @@
             </div>
 
 
-            <div class="row">
+            <div class="row justify-content-center">
             <div class="col-sm-12" style="max-width:100%; max-height:100%;">
             <table class="myTableBg1" align="center">
             <tbody>
+              <p align="center">SCROLL DOWN FOR PIE CHART</p>
             <tr v-for="(item, index) in list"   v-bind:class="{   'asset-row':true, 'acts-as-link':true, 'hover-shadow':true   } ">
-            <td>
+            <th class="row-cell has-text-centered">
 
-              <canvas id="pie-holders" style="position: relative; max-height:150vh; max-width:150vh"></canvas>
+              <div class="row">
+                <div class="col-1">
+                </div>
 
-            </td>
+            <div class="col-10 justify-content-center overflow-auto">
+
+          <canvas style="font: #fff; position: top;" height="850" width="auto" id="pie-holders" align="center"></canvas>
+
+
+            </div>
+
+            <div class="col-1">
+            </div>
+            </div>
+
+          </th>
             </tr>
 
 
@@ -233,6 +240,8 @@
             </div>
           </tbody>
       </table>
+
+
 
 
 
